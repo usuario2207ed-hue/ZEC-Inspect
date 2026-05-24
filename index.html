@@ -841,8 +841,50 @@ document.createElement("a");
 link.href =
 URL.createObjectURL(blob);
 
+const agora = new Date();
+
+const dataArquivo =
+
+agora.getFullYear()
+
++ "-"
+
++ String(
+agora.getMonth() + 1
+).padStart(2,"0")
+
++ "-"
+
++ String(
+agora.getDate()
+).padStart(2,"0")
+
++ "_"
+
++ String(
+agora.getHours()
+).padStart(2,"0")
+
++ "-"
+
++ String(
+agora.getMinutes()
+).padStart(2,"0")
+
++ "-"
+
++ String(
+agora.getSeconds()
+).padStart(2,"0");
+
 link.download =
-"Historico_Preditivo_ZEC.txt";
+
+"Historico_Preditivo_ZEC_"
+
++ dataArquivo +
+
+".txt";
+
 
 link.click();
 
